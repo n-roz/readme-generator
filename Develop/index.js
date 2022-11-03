@@ -10,7 +10,12 @@ const questions = [
         type: 'input',
         name: 'username',
         message: 'Enter your GitHub username',
-
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("You must enter a GitHub username.");
+            }
+            return true;
+        }
 
     }
 
