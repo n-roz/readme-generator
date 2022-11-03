@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/n-roz/readme-generator/issues"
   },
-  "homepage": "https://github.com/n-roz/readme-generator#readme"
+  "homepage": "https://github.com/n-roz/readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
 }
