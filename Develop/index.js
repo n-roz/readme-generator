@@ -30,36 +30,12 @@ const generateMarkdown = require('./Develop/utils/generateMarkdown.js');
 //         return true;
 //     }
 //     },
-//     // title
-//     {
-//         type: 'input',
-//         name: 'description',
-//         message: 'Enter the title of your project',
-//         // validate
-//         validate: function(answer) {
-//             if (answer.length < 1) {
-//                 return console.log("Enter the title of your project");
-//             }
-//             return true;
-//         }
-//     },
-//     // project installation
-//     {
-//         type: 'input',
-//         name: 'installation',
-//         message: 'Explain how user installs for Installation Section',
-//     },
-//     // usage
-//     {
-//         type: 'input',
-//         name: 'usage',
-//         message: 'Enter your project instructions and examples for Usage Section',
-//     },
-// ];
+
 
 // TODO: Create an array of questions for user input attempt #2
-const promptinfo = () => {
-    return inquirer.prompt([
+// const promptinfo = () => {
+//     return inquirer.prompt([
+const questions = [
         {
             type: 'input',
             name: 'username',
@@ -104,31 +80,27 @@ const promptinfo = () => {
             type: 'list',
             name: 'license',
             message: 'The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).',
-            choices: ['GPL', 'LGPL', 'MIT', 'Apache', 'none']
-        },
-    ])
-}
+            choices: ['GNU GPL', 'MIT', 'Apache', 'none']
+        }
+    ];
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if(err) throw err;
         console.log('README.md Has Been Created')
-    })
+    });
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    questions()
-        .then(input => {
-            return generateMarkdown(input);
-        })
-        .then(markdown => {
-            writeToFile('./dist/README.md', markdown);
-        })
-        .catch(err => {
-            console.log(err);
-        })
+    inquirer()
+        .prompt(questions)
+        .then(answers => {
+            console.log(answers)
+            writeToFile('./dist/README.md', generateMarkdown(answers))
+        });
 }
 
 // Function call to initialize app
