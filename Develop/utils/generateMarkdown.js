@@ -92,9 +92,9 @@ function generateMarkdown(data) {
     ${licenseSection}
 
     ## Questions
-    [My GitHub](https://github.com${username})
+    [My GitHub](https://github.com${data.username})
 
-    I can be reached at ${email}
+    I can be reached at ${data.email}
   `;
 }
 
