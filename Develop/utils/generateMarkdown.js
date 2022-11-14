@@ -99,3 +99,4 @@ function generateMarkdown(data) {
 }
 
 module.exports = generateMarkdown;
+// require('./generateMarkdown.js')()
