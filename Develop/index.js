@@ -40,21 +40,27 @@ const questions = [
             type: 'input',
             name: 'username',
             message: 'Enter your GitHub username',
+            validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("Enter your GitHub username");
+            }
+            return true;
+            }
         },
         {
             type: 'input',
             name: 'email',
-            message: 'Enter your email address',
+            message: 'Enter your email address'
         },
         {
             type: 'input',
             name: 'title',
-            message: 'Enter the project title',
+            message: 'Enter the project title'
         },
         {
             type: 'input',
             name: 'description',
-            message: 'Provide a short description explaining the what, why, and how of your project.',
+            message: 'Provide a short description explaining the what, why, and how of your project.'
         },
         {
             type: 'input',
@@ -64,12 +70,12 @@ const questions = [
         {
             type: 'input',
             name: 'usage',
-            message: 'Provide instructions and examples for use. Include screenshots as needed.',
+            message: 'Provide instructions and examples for use. Include screenshots as needed.'
         },
         {
             type: 'input',
             name: 'contribution',
-            message: 'List your collaborators, if any, with links to their GitHub profiles.',
+            message: 'List your collaborators, if any, with links to their GitHub profiles.'
         },
         {
             type: 'input',
@@ -80,7 +86,7 @@ const questions = [
             type: 'list',
             name: 'license',
             message: 'The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).',
-            choices: ['GNU GPL', 'MIT', 'Apache', 'none']
+            choices: ['Apache', 'GNU GPL', 'MIT', 'none']
         }
     ];
 
