@@ -104,15 +104,32 @@ const promptinfo = () => {
             type: 'list',
             name: 'license',
             message: 'The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).',
-        }
+            choices: ['GPL', 'LGPL', 'MIT', 'Apache', 'none']
+        },
     ])
 }
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if(err) throw err;
+        console.log('README.md Has Been Created')
+    })
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    questions()
+        .then(input => {
+            return generateMarkdown(input);
+        })
+        .then(markdown => {
+            writeToFile('./dist/README.md', markdown);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+}
 
 // Function call to initialize app
 init();
