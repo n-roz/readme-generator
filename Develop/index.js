@@ -12,14 +12,50 @@ const questions = [
         message: 'Enter your GitHub username',
         validate: function (answer) {
             if (answer.length < 1) {
-                return console.log("You must enter a GitHub username.");
+                return console.log("Enter your GitHub username");
             }
             return true;
         }
-
+    },
+    // github repo
+    {
+    type: 'input',
+    name: 'repository',
+    message: 'Enter the name of your GitHub repository',
+    // validate
+    validate: function(answer) {
+        if (answer.length < 1) {
+            return console.log("Enter the name of your GitHub repository");
+        }
+        return true;
     }
-
-
+    },
+    // title
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Enter the title of your project',
+        // validate
+        validate: function(answer) {
+            if (answer.length < 1) {
+                return console.log("Enter the title of your project");
+            }
+            return true;
+        }
+    },
+    // project installation
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Explain how user installs for Installation Section',
+    },
+    // usage
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Enter your project instructions and examples for Usage Section',
+    },
+    
 
 
 
