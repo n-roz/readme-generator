@@ -4,37 +4,7 @@ const fs = require('fs');
 // Generate the README
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input attempt #1
-// const questions = [
-//     {
-//         type: 'input',
-//         name: 'username',
-//         message: 'Enter your GitHub username',
-//         validate: function (answer) {
-//             if (answer.length < 1) {
-//                 return console.log("Enter your GitHub username");
-//             }
-//             return true;
-//         }
-//     },
-//     // github repo
-//     {
-//     type: 'input',
-//     name: 'repository',
-//     message: 'Enter the name of your GitHub repository',
-//     // validate
-//     validate: function(answer) {
-//         if (answer.length < 1) {
-//             return console.log("Enter the name of your GitHub repository");
-//         }
-//         return true;
-//     }
-//     },
-
-
-// TODO: Create an array of questions for user input attempt #2
-// const promptinfo = () => {
-//     return inquirer.prompt([
+// TODO: Create an array of questions for user input
 const questions = [
         {
             type: 'input',
@@ -90,7 +60,6 @@ const questions = [
         }
     ];
 
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
@@ -111,7 +80,3 @@ function init() {
 
 // Function call to initialize app
 init();
-
-// writeToFile = (data) => {
-//     fs.writeFile()
-// }

@@ -73,8 +73,8 @@ function generateMarkdown(data) {
     - [Usage](#usage)
     - [Contributors](#contributors)
     - [Tests](#tests)
-    - [Questions](#questions)
     - [License](#license)
+    - [Questions](#questions)
 
     ## Installation
     ${data.installation}
@@ -99,4 +99,3 @@ function generateMarkdown(data) {
 }
 
 module.exports = generateMarkdown;
-// require('./generateMarkdown.js')()
