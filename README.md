@@ -54,6 +54,10 @@ The application is invoked in the command line by entering:
 node index.js
 ```
 
+![Alt text](images/ezgif-2-fe8dcd89b2.gif "Gif 1")
+![Alt text](images/ezgif-3-d7625a3cd1.gif "Gif 2")
+![Alt text](images/Screen%20Shot%202022-12-06%20at%2012.17.32%20PM.png "Example README.md")
+
 ## Contributors
 [n-roz on GitHub](https://github.com/n-roz) with assistance from AskBCS.
 
