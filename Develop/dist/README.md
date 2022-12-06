@@ -1,9 +1,9 @@
 
-  # README.md Generator
+  # readme generator
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
 
   ## Description
-  This is just an example i'm doing for the gif, but here is where your description goes.
+  I am doing this readme for this video
 
   ## Table of Contents
     - [Description](#description)
@@ -15,16 +15,16 @@
     - [Questions](#questions)
 
     ## Installation
-    1. install node.js
+    node.js, inquirer, etc etc
 
     ## Usage
-    Enter npm i
+    invoke node index.js
 
     ## Contributors
-    me for right now
+    just me for now with some AskBCS
 
     ## Tests
-    N/A
+    none for right now
 
     ## License
     [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]This application is covered by MIT license (https://opensource.org/licenses/MIT)
@@ -32,5 +32,5 @@
     ## Questions
     [My GitHub](https://github.comn-roz)
 
-    I can be reached at naomiroznik@gmail.com
+    I can be reached at itssame@gmail.com
   
