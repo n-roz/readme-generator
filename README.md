@@ -4,7 +4,7 @@
 
 Do you struggle with creating a README.md after you finish a project? Do you dislike having to sit down after you finish a frustrating project only to have to then write about that frustrating project? Fear no more! For I have created a simple README.md generator that you can use from your command line.
 
-For more information about how to create a professional README, please review this [FullStack guide].(https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+For more information about how to create a professional README, please review this [FullStack guide.](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
 ## Table of Contents
 - [User Story](#userstory)
@@ -43,8 +43,9 @@ THEN I am taken to the corresponding section of the README
 ```
 
 ## Installation
-- Confirm Node.js is installed on your computer using ```node -v``` in the command line. [Node Installation Guide on the Full-Stack Blog.](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
+- Confirm Node.js is installed on your computer using ```node -v``` in the command line. Node Installation Guide on the [Full-Stack Blog.](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
 - Use ```git clone``` to clone the project locally.
+- Please ```cd``` into the ```Develop``` folder. This is one mistake I made in my project that should be fixed, but I have not been able to get the filepaths working again once I move the files and eventually I gave up. Resubmission is a possibility I'm considering.
 - You will use the [Inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4) to dynamically create the README.md file from the user's input. Enter ```npm init``` and then ```npm i inquirer@8.2.4``` in the command line.
 
 ## Usage
